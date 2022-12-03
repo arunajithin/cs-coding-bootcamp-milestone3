@@ -31,6 +31,9 @@ router.put('/update',
         if(req.body.phone){
             updates['phone'] = req.body.phone;
         };
+        if(req.body.password){
+            updates['password'] = req.body.password;
+        };
 
         UserModel
         .findOneAndUpdate(
