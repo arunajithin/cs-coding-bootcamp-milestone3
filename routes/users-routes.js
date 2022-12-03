@@ -13,6 +13,9 @@ router.post('/registration',
             "password": req.body.password,
             "phone": req.body.phone
         };
+        if(req.body.password){
+            updates['password'] = req.body.password;
+        };
 
         UserModel
             .create(newDocument)
